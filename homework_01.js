@@ -1,7 +1,7 @@
 function sommaI(a){
     var i = 0;
     var sum = 0;
-    while(a[i]>=0 || a.length>0){
+    while(a[i]>=0 && i<a.length){
         sum = sum + a[i];
         i++;
     }
@@ -37,16 +37,16 @@ function sommadispR(n, i, current, sum){
 /////////////////////////////////////////////////////////////fine due
 function media(a){
     var somma=0;
-    for(var i=0; i<10; i++){
+    for(var i=0; i<a.length; i++){
         somma=somma+a[i];
     }
     var media=somma/a.length;
     return media;
 }
 /////////////////////////////////////////////////////////////////
-function mediaR(a,somma){
+function mediaR(a){
     if(a.length==0){
-        return somma;
+        return 0;
     }else{
         return a[0]+mediaR(a.slice(1));
     }
@@ -54,7 +54,7 @@ function mediaR(a,somma){
 ///////////////////////////////////////////////////////////////////fine tre
 function sumcompI(a,b){
     var somma=0;
-    if(a>b){
+    if(a<b){
         for(a; a<=b; a++){
             somma=somma+a;
         }
@@ -97,16 +97,16 @@ function divI(a,b){
         return 0;
     }
     var i = 0;
-    while((a-b)<=0){
-        sottr = sottr - a;
+    while((a-b)>=0){
+        a=a-b;
         i++;
     }
-    var sottr=new Array(i,a);
-    return sottr;
+    var sott=new Array(i,a);
+    return sott;
 }
 //////////////////////////////////////////////////////////////////////////
 function rDiv(b, times, sub){
-	if (sub < b) return times + " resto " + sub;
+	if (sub < b) return [times,sub];
 	return rDiv(b, times + 1, sub - b);
 }
 ////////////////////////////////////////////////////////////////////fine sei
@@ -114,7 +114,7 @@ function pow(x,y){
     var i=0;
     var c=x;
     while(i!=y-1){
-        c=mult(a,b);
+        c=molt(c,x);
         i++;
     }
     return c;
@@ -126,7 +126,7 @@ function rrpow(a, b){
 
 function rPow(a, b, times, mul){
 	if (times == b) return mul;
-	mul = mult(mul, a);
+	mul = molt(mul, a);
 	return rPow(a, b, times + 1, mul);
 }
 ////////////////////////////////////////////////////////////////////////fine sette
@@ -208,7 +208,7 @@ function ex_3_I(a){
     return media(a);
 }
 function ex_3_R(a){
-    return (mediaR(a,0)/a.length);
+    return (mediaR(a)/a.length);
 }
 function ex_4_I(a,b){
     return sumcompI(a,b);
