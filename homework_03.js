@@ -1,5 +1,5 @@
 
-Array.prototype.sum = function () {
+Array.prototype.ex_1 = function () {
     function buildUntil(a, check) {
         var tmparray = [];
         a.every(x => {
@@ -16,12 +16,8 @@ Array.prototype.sum = function () {
     return buildUntil(this, x => x > 0).reduce((acc, x) => acc + x, 0);
 }
 
-function ex_1_P(a) {
-    return a.sum();
-}
-
 //////////////////////////////////////////////////////////////////////////////////////////////////fine uno
-Array.prototype.media = function(){
+Array.prototype.ex_3 = function(){
     if(this.length == 0){
         return 0;
     }else{
@@ -29,13 +25,10 @@ Array.prototype.media = function(){
     }
 }
 
-function ex_3_P(a){
-    return a.media();   
-}
 ////////////////////////////////////////////////////////////////////////////////////////////////////fine tre
 var array = [3,5,6,1,2,7,8,9,0]; 
 
-Array.prototype.bidimensionaleR = function () {
+Array.prototype.ex_8= function () {
 
     function magic(myarray, matrix) {
         matrix.unshift(myarray);
@@ -54,12 +47,8 @@ Array.prototype.bidimensionaleR = function () {
     return bidimensionaleRInternal(this, Math.sqrt(this.length));
 }
 
-function ex_8_P(a) {
-    return a.bidimensionaleR();
-}
-
 ///////////////////////////////////////////////////////////////////////////////////fine 8
-Array.prototype.invert = function() {
+Array.prototype.ex_9 = function() {
     var result = [];
     
     this.forEach(x => {
@@ -69,15 +58,7 @@ Array.prototype.invert = function() {
     return result;
 }
 
-function ex_9_P(a) {
-    return a.invert();
-}
-
 /////////////////////////////////////////////////////////////////////////////////fine 9
-Array.prototype.sort = function () {
+Array.prototype.ex_11 = function () {
     return this.filter(x => x%2!=0).concat(this.filter(x => x%2==0));
-}
-
-function ex_11_P(a) {
-    return a.sort();
 }
