@@ -49,5 +49,5 @@ function rpn(str){
                 res.push(parseInt(array[i]));                
        }
    }
-   return res;
+   return res.pop();
 }

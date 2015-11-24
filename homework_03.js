@@ -1,5 +1,5 @@
 
-Array.prototype.ex_1 = function () {
+Array.prototype.sum = function () {
     function buildUntil(a, check) {
         var tmparray = [];
         a.every(x => {
@@ -17,7 +17,7 @@ Array.prototype.ex_1 = function () {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////fine uno
-Array.prototype.ex_3 = function(){
+Array.prototype.robe = function(){
     if(this.length == 0){
         return 0;
     }else{
@@ -28,7 +28,7 @@ Array.prototype.ex_3 = function(){
 ////////////////////////////////////////////////////////////////////////////////////////////////////fine tre
 var array = [3,5,6,1,2,7,8,9,0]; 
 
-Array.prototype.ex_8= function () {
+Array.prototype.matr= function () {
 
     function magic(myarray, matrix) {
         matrix.unshift(myarray);
@@ -48,7 +48,7 @@ Array.prototype.ex_8= function () {
 }
 
 ///////////////////////////////////////////////////////////////////////////////////fine 8
-Array.prototype.ex_9 = function() {
+Array.prototype.rior = function() {
     var result = [];
     
     this.forEach(x => {
@@ -59,6 +59,26 @@ Array.prototype.ex_9 = function() {
 }
 
 /////////////////////////////////////////////////////////////////////////////////fine 9
-Array.prototype.ex_11 = function () {
+Array.prototype.r = function () {
     return this.filter(x => x%2!=0).concat(this.filter(x => x%2==0));
+}
+
+function ex_1(arr){
+    return arr.sum();
+}
+
+function ex_3(arr){
+    return arr.robe();
+}
+
+function ex_8(arr){
+    return arr.matr();
+}
+
+function ex_9(arr){
+    return arr.rior();
+}
+
+function ex_11(arr){
+    return arr.r();
 }
